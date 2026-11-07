@@ -1,0 +1,1003 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #100b20;
+    --surface: #211936;
+    --text: #ffffff;
+    --muted: #b9b1ca;
+    --orange: #f47b65;
+    --pink: #ef8bba;
+    --purple: #a78bfa;
+    --border: rgba(255, 255, 255, 0.16);
+    --gradient: linear-gradient(105deg, #f47b65, #ef8bba, #ffffff);
+    --content: 1120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    color: var(--text);
+    background-color: var(--bg);
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.55;
+    background-image: url('../assets/images/background-desktop.png');
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.site-shell {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    width: min(calc(100% - 48px), var(--content));
+    margin-inline: auto;
+}
+
+
+/* 2. HEADER AND NAVIGATION */
+
+.site-header {
+    width: min(calc(100% - 48px), 1240px);
+    margin: 0 auto;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.brand img {
+    width: 30px;
+    height: 30px;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.site-header nav a,
+.back-link {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-header nav a:hover,
+.back-link:hover {
+    color: white;
+}
+
+.site-header nav .nav-cta {
+    border: 1px solid var(--border);
+    padding: 9px 18px;
+    border-radius: 999px;
+    color: white;
+}
+
+
+/* 3. HEADINGS AND TEXT */
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(3.1rem, 8vw, 6.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.065em;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(2.3rem, 5vw, 4.1rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+    margin-bottom: 22px;
+}
+
+.gradient-text {
+    color: var(--pink);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eyebrow {
+    color: #d9d0e7;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 18px;
+}
+
+.eyebrow-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    box-shadow: 0 0 14px var(--orange);
+}
+
+.hero-copy {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: var(--muted);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+
+/* 4. BUTTONS */
+
+.button {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 13px 24px;
+    border: 0;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-primary {
+    color: #24162b;
+    background: linear-gradient(100deg, #f58b70, #f1a2c3);
+    box-shadow: 0 10px 30px rgba(239, 139, 186, 0.2);
+}
+
+.button-primary:hover {
+    box-shadow: 0 14px 36px rgba(239, 139, 186, 0.32);
+}
+
+.button-secondary {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+}
+
+.button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+
+/* 5. HOMEPAGE HERO */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: clamp(82px, 12vw, 145px) 0 120px;
+    isolation: isolate;
+}
+
+.event-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 26px;
+    margin: 28px 0 32px;
+    color: #ddd6e8;
+}
+
+.event-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.event-meta img {
+    width: 18px;
+    height: 18px;
+}
+
+.pin-icon {
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.hero-note {
+    margin-top: 14px;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.hero-orbit {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 470px;
+    height: 470px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit-two {
+    width: 650px;
+    height: 650px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+
+/* 6. HOMEPAGE CONTENT */
+
+.content-section {
+    padding: 70px 0 115px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    min-height: 230px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(54, 42, 80, 0.76), rgba(25, 19, 43, 0.72));
+    transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-number {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 0.85rem;
+    margin-bottom: 26px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+
+/* 7. CONFERENCE SCHEDULE */
+
+.schedule-section {
+    padding: 40px 0 120px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.schedule-panel {
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 10px 26px 18px;
+    background: rgba(29, 22, 48, 0.78);
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 21px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.schedule-row > span {
+    color: var(--orange);
+}
+
+.schedule-row strong,
+.schedule-row small {
+    display: block;
+}
+
+.schedule-row small {
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+.schedule-row time {
+    color: #e5dce9;
+    font-size: 0.9rem;
+}
+
+.schedule-disclaimer {
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin: 14px 0 0;
+}
+
+
+/* 8. CLOSING SECTION */
+
+.closing-cta {
+    text-align: center;
+    padding: 65px 24px 100px;
+    border-top: 1px solid var(--border);
+}
+
+.closing-cta h2 {
+    margin-bottom: 30px;
+}
+
+
+/* 9. REGISTRATION PAGE */
+
+.form-layout {
+    min-height: calc(100vh - 180px);
+    display: grid;
+    grid-template-columns: 1fr minmax(340px, 510px);
+    align-items: center;
+    gap: clamp(40px, 8vw, 110px);
+    padding-block: 50px 80px;
+}
+
+.form-intro h1 {
+    font-size: clamp(3.4rem, 7vw, 5.5rem);
+}
+
+.form-intro .hero-copy {
+    margin-left: 0;
+}
+
+.form-side-note {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 42px;
+    color: var(--muted);
+}
+
+.form-side-note p {
+    margin: 0;
+}
+
+.form-side-note strong {
+    color: white;
+}
+
+.note-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 42px;
+    height: 42px;
+    border-radius: 14px;
+    color: var(--orange);
+    background: rgba(244, 123, 101, 0.12);
+    font-size: 1.3rem;
+}
+
+.form-card {
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    background: linear-gradient(145deg, rgba(39, 30, 62, 0.92), rgba(23, 17, 39, 0.9));
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.form-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.form-card-heading .eyebrow {
+    color: var(--orange);
+    margin-bottom: 7px;
+}
+
+.form-card-heading h2 {
+    font-size: 1.9rem;
+    margin: 0;
+}
+
+.step-label {
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding-top: 6px;
+}
+
+
+/* 10. FORM INPUTS */
+
+.field-group {
+    margin-bottom: 20px;
+}
+
+.field-group > label:first-child {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.field-group label span {
+    color: var(--orange);
+}
+
+.field-group input:not([type="file"]) {
+    width: 100%;
+    height: 49px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 11px;
+    color: white;
+    background: rgba(255, 255, 255, 0.055);
+    transition: border-color 0.2s ease;
+}
+
+.field-group input::placeholder {
+    color: #80788f;
+}
+
+.field-group input:focus {
+    outline: 0;
+    border-color: var(--pink);
+}
+
+.field-group input[aria-invalid="true"] {
+    border-color: #ff7e86;
+}
+
+.field-hint,
+.upload-subcopy {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 6px;
+}
+
+.error-message {
+    display: block;
+    color: #ff9298;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.upload-zone {
+    min-height: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.36);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.upload-zone:hover {
+    border-color: var(--pink);
+}
+
+.upload-icon {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.upload-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.upload-copy {
+    font-weight: 700;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.form-status {
+    min-height: 18px;
+    color: #ff9298;
+    font-size: 0.82rem;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.privacy-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 17px 0 0;
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.privacy-note img {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* 11. TICKET PAGE */
+
+.ticket-container {
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+
+.ticket-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.ticket-heading h1 {
+    font-size: clamp(2.8rem, 6vw, 4.7rem);
+}
+
+.ticket-card {
+    width: min(100%, 690px);
+    min-height: 280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(125deg, rgba(72, 55, 94, 0.92), rgba(33, 25, 53, 0.92));
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.34);
+}
+
+.ticket-main {
+    padding: 30px;
+    background-image: url('../assets/images/pattern-ticket.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+.ticket-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.ticket-brand img {
+    width: 38px;
+    height: 38px;
+}
+
+.ticket-brand h2 {
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.ticket-brand p {
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin: 3px 0 0;
+}
+
+.ticket-attendee {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ticket-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ticket-attendee h3 {
+    font-size: 1.3rem;
+    margin: 0 0 4px;
+}
+
+.ticket-attendee p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.ticket-email {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin: 12px 0 0 80px;
+}
+
+.ticket-stub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 12px;
+    border-left: 1px dashed rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.ticket-number-label {
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0;
+}
+
+.ticket-stub h3 {
+    color: var(--pink);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.barcode {
+    writing-mode: vertical-rl;
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 1.4rem;
+}
+
+.ticket-type {
+    color: var(--muted);
+    font-size: 0.65rem;
+    text-align: center;
+    margin: 0;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* 12. FOOTER */
+
+.site-footer {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.site-footer .brand {
+    color: white;
+    font-size: 1rem;
+}
+
+.site-footer .brand img {
+    width: 24px;
+    height: 24px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.compact-footer {
+    margin-top: 30px;
+}
+
+
+/* 13. TABLET RESPONSIVENESS */
+
+@media (max-width: 760px) {
+
+    body {
+        background-image: url('../assets/images/background-tablet.png');
+    }
+
+    .container,
+    .site-header {
+        width: min(calc(100% - 36px), var(--content));
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        min-height: auto;
+    }
+
+    .schedule-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 80px;
+    }
+
+    .form-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        max-width: 570px;
+    }
+
+    .form-intro {
+        text-align: center;
+    }
+
+    .form-intro .hero-copy {
+        margin-inline: auto;
+    }
+
+    .form-side-note {
+        justify-content: center;
+        text-align: left;
+        margin-top: 24px;
+    }
+
+    .site-footer {
+        flex-wrap: wrap;
+        padding-block: 20px;
+    }
+}
+
+
+/* 14. MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+    body {
+        background-image: url('../assets/images/background-mobile.png');
+    }
+
+    .site-header {
+        min-height: 72px;
+    }
+
+    .site-header nav {
+        gap: 13px;
+    }
+
+    .site-header nav a {
+        font-size: 0.82rem;
+    }
+
+    .site-header nav a:not(.nav-cta) {
+        display: none;
+    }
+
+    .brand {
+        font-size: 1.08rem;
+    }
+
+    .hero {
+        padding: 90px 0 80px;
+    }
+
+    .orbit-one {
+        width: 300px;
+        height: 300px;
+        top: 65px;
+    }
+
+    .orbit-two {
+        width: 420px;
+        height: 420px;
+        top: 5px;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .content-section {
+        padding: 50px 0 75px;
+    }
+
+    .schedule-row {
+        grid-template-columns: 24px 1fr;
+    }
+
+    .schedule-row time {
+        grid-column: 2;
+    }
+
+    .closing-cta {
+        padding: 55px 0 75px;
+    }
+
+    .site-footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .site-footer p {
+        width: 100%;
+    }
+
+    .form-layout {
+        padding-top: 30px;
+    }
+
+    .form-card {
+        padding: 22px 18px;
+    }
+
+    .form-card-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    .ticket-container {
+        padding-top: 35px;
+    }
+
+    .ticket-card {
+        grid-template-columns: 1fr 85px;
+        min-height: 250px;
+    }
+
+    .ticket-main {
+        padding: 22px 17px;
+    }
+
+    .ticket-brand h2 {
+        font-size: 1.1rem;
+    }
+
+    .ticket-brand p {
+        font-size: 0.65rem;
+    }
+
+    .ticket-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .ticket-attendee h3 {
+        font-size: 1rem;
+    }
+
+    .ticket-email {
+        margin-left: 60px;
+        font-size: 0.7rem;
+    }
+
+    .ticket-stub {
+        padding-inline: 6px;
+    }
+
+    .ticket-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* 15. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* 16. PRINT SETTINGS */
+
+@media print {
+
+    body {
+        background: white !important;
+        color: #171023 !important;
+    }
+
+    .site-header,
+    .site-footer,
+    .ticket-actions {
+        display: none !important;
+    }
+
+    .ticket-container {
+        padding: 20px;
+    }
+
+    .ticket-card {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}

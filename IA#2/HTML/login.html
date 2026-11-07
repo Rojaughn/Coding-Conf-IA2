@@ -1,0 +1,175 @@
+<!--Rojaghn Murdock ID 2505175-->
+<!--Web Programming IA#2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for Coding Conf 2026 and create your digital ticket.">
+
+  <title>Register | Coding Conf 2026</title>
+
+  <link rel="icon" href="../assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script src="../js/validation.js" defer></script>
+</head>
+
+
+<body class="site-shell form-page">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Coding Conf home">
+      <img src="../assets/images/logo-mark.svg" alt="" class="brand-mark">
+      <span>Coding Conf</span>
+    </a>
+
+    <a class="back-link" href="index.html">← Back to event</a>
+  </header>
+
+  <main class="form-layout container">
+
+    <section class="form-intro">
+      <p class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        CODING CONF · OCTOBER 26, 2026
+      </p>
+
+      <h1>Get your <span class="gradient-text">ticket.</span></h1>
+
+      <p class="hero-copy">
+        Tell us a little about yourself. Your personalized conference ticket
+        will be ready as soon as you register.
+      </p>
+
+      <div class="form-side-note">
+        <span class="note-icon">✦</span>
+        <p>
+          <strong>One community, countless ideas.</strong><br>
+          Join developers and curious minds in Papine, Kingston.
+        </p>
+      </div>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+
+      <div class="form-card-heading">
+        <div>
+          <p class="eyebrow">ATTENDEE DETAILS</p>
+          <h2 id="form-title">Create your pass</h2>
+        </div>
+
+        <span class="step-label">01 / 01</span>
+      </div>
+
+      <form id="registration-form" novalidate>
+
+        <div class="field-group">
+          <label for="fullName">Full name <span>*</span></label>
+
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            placeholder="e.g. Alex Morgan"
+            autocomplete="name"
+            aria-describedby="nameError"
+            required
+          >
+
+          <small class="error-message" id="nameError"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email address <span>*</span></label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="alex@example.com"
+            autocomplete="email"
+            aria-describedby="emailError"
+            required
+          >
+
+          <small class="error-message" id="emailError"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="github">GitHub username <span>*</span></label>
+
+          <input
+            id="github"
+            name="github"
+            type="text"
+            placeholder="@yourusername"
+            autocomplete="off"
+            aria-describedby="githubError"
+            required
+          >
+
+          <small class="field-hint">
+            Include the @ symbol at the beginning.
+          </small>
+
+          <small class="error-message" id="githubError"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="avatar">Upload avatar <span>*</span></label>
+
+          <label class="upload-zone" for="avatar">
+            <span class="upload-icon">
+              <img src="../assets/images/icon-upload.svg" alt="">
+            </span>
+
+            <span class="upload-copy" id="uploadCopy">
+              Drag and drop or click to upload
+            </span>
+
+            <span class="upload-subcopy">
+              JPG or PNG · Maximum file size 500KB
+            </span>
+          </label>
+
+          <input
+            class="visually-hidden"
+            id="avatar"
+            name="avatar"
+            type="file"
+            accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+            aria-describedby="avatarError"
+            required
+          >
+
+          <small class="error-message" id="avatarError"></small>
+        </div>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+        <button class="button button-primary submit-button" type="submit">
+          Generate my ticket <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="privacy-note">
+          <img src="../assets/images/icon-info.svg" alt="">
+          Your details are stored in this browser for this demo.
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container compact-footer">
+    <a class="brand" href="index.html">
+      <img src="../assets/images/logo-mark.svg" alt="">
+      <span>Coding Conf</span>
+    </a>
+
+    <small>© 2026 Coding Conf. A student project.</small>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!--Rojaghn Murdock ID 2505175-->
+<!--Web Programming IA#2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Ticket | Coding Conf 2026</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/ticket.js" defer></script>
+</head>
+
+
+<body class="site-shell ticket-page">
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="../assets/images/logo-mark.svg" alt="">
+            <span>Coding Conf</span>
+        </a>
+
+        <a class="back-link" href="index.html">← Back to home</a>
+    </header>
+
+    <main class="ticket-container container">
+
+        <section class="ticket-heading">
+            <p class="eyebrow">CODING CONF 2026</p>
+
+            <h1>
+                Congrats, <span id="ticketName" class="gradient-text">Attendee</span>!
+            </h1>
+
+            <p class="hero-copy">
+                Your ticket is ready. We can't wait to see you at Coding Conf.
+            </p>
+        </section>
+
+        <section class="ticket-card" aria-label="Conference admission ticket">
+
+            <div class="ticket-main">
+
+                <div class="ticket-brand">
+                    <img src="../assets/images/logo-mark.svg" alt="">
+                    <div>
+                        <h2>Coding Conf</h2>
+                        <p>OCTOBER 26, 2026 / KINGSTON, JAMAICA</p>
+                    </div>
+                </div>
+
+                <div class="ticket-attendee">
+
+                    <img
+                        id="ticketAvatar"
+                        class="ticket-avatar"
+                        src="../assets/images/image-avatar.jpg"
+                        alt="Attendee avatar"
+                    >
+
+                    <div>
+                        <h3 id="displayName">Attendee Name</h3>
+                        <p id="displayGithub">@username</p>
+                    </div>
+
+                </div>
+
+                <p class="ticket-email" id="displayEmail">
+                    attendee@example.com
+                </p>
+
+            </div>
+
+            <div class="ticket-stub">
+
+                <p class="ticket-number-label">TICKET NUMBER</p>
+
+                <h3 id="ticketNumber">#000000</h3>
+
+                <div class="barcode" aria-label="Decorative barcode">
+                    || ||| || |||| | ||| || ||||
+                </div>
+
+                <p class="ticket-type">GENERAL ADMISSION</p>
+
+            </div>
+
+        </section>
+
+        <div class="ticket-actions">
+            <button
+                type="button"
+                class="button button-primary"
+                onclick="window.print()"
+            >
+                Print ticket
+            </button>
+
+            <a href="index.html" class="button button-secondary">
+                Return home
+            </a>
+        </div>
+
+        <p id="ticketMessage" class="form-status" role="status"></p>
+
+    </main>
+
+    <footer class="site-footer container compact-footer">
+        <a class="brand" href="index.html">
+            <img src="../assets/images/logo-mark.svg" alt="">
+            <span>Coding Conf</span>
+        </a>
+
+        <small>© 2026 Coding Conf. A student project.</small>
+    </footer>
+
+</body>
+</html>
